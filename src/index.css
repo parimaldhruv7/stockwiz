@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 p-0;
+    font-family: 'Degular Display', 'DM Sans', 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+   
+  }
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+  --01-spacing-size-4: 4px;
+  --98-sementic-colours-border-default: rgba(255, 255, 255, 0.15);
+  --98-sementic-colours-text-text-white: var(--99-primitives-base-white);
+  --99-primitives-base-white: rgba(255, 255, 255, 1);
+  --99-primitives-red-500: rgba(255, 29, 29, 1);
+  --base-black-base: rgba(16, 16, 16, 1);
+  --font-sizes-10-medium-font-family: "SF Pro Text", Helvetica;
+  --font-sizes-10-medium-font-size: 10px;
+  --font-sizes-10-medium-font-style: normal;
+  --font-sizes-10-medium-font-weight: 500;
+  --font-sizes-10-medium-letter-spacing: 0px;
+  --font-sizes-10-medium-line-height: 15px;
+  --font-sizes-12-bold-font-family: "SF Pro Text", Helvetica;
+  --font-sizes-12-bold-font-size: 12px;
+  --font-sizes-12-bold-font-style: normal;
+  --font-sizes-12-bold-font-weight: 700;
+  --font-sizes-12-bold-letter-spacing: 0px;
+  --font-sizes-12-bold-line-height: 18px;
+  --font-sizes-12-medium-font-family: "SF Pro Text", Helvetica;
+  --font-sizes-12-medium-font-size: 12px;
+  --font-sizes-12-medium-font-style: normal;
+  --font-sizes-12-medium-font-weight: 500;
+  --font-sizes-12-medium-letter-spacing: 0px;
+  --font-sizes-12-medium-line-height: 18px;
+  --primary-colors-yellow: rgba(255, 203, 21, 1);
+  --primary-green-primary-green-40: rgba(38, 188, 13, 1);
+  --section-black-section: rgba(0, 0, 0, 1);
+  --stroke-stroke-dark-mode: rgba(42, 42, 42, 1);
+  --text-heading-text-dark: rgba(255, 255, 255, 1);
+  --text-sub-head-text-dark: rgba(255, 255, 255, 0.75);
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}

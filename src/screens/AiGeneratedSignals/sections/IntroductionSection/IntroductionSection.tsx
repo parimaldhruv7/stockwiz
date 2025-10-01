@@ -1,0 +1,418 @@
+import React from "react";
+import { Badge } from "../../../../components/ui/badge";
+import { Button } from "../../../../components/ui/button";
+import { Card, CardContent } from "../../../../components/ui/card";
+
+const signalCards = [
+  {
+    id: 1,
+    aiGenerated: true,
+    company: "RELIANCE",
+    exchange: "NSE",
+    description: "RELIANCE 31 JUL 1410 CALL",
+    price: "₹6.95",
+    change: "+₹3.25 (+27.24%)",
+    changeColor: "text-[#26bc0d]",
+    entry: "₹20.95",
+    stopLoss: "₹2.85",
+    strategy: "Trend Rider",
+    status: "In Buying Range",
+    statusColor: "text-[#26bc0d]",
+    tags: ["Swing", "Stock Options"],
+    tagColors: ["bg-[#ffcb14] text-[#0a0b0a]", "bg-[#007aff] text-white"],
+    companyLogo: "/ellipse-1-1.png",
+    exchangeIcon: "/image-27.png",
+    opacity: "opacity-70",
+  },
+  {
+    id: 2,
+    aiGenerated: true,
+    company: "RELIANCE",
+    exchange: "NSE",
+    description: "RELIANCE 31 JUL 1410 CALL",
+    price: "₹6.95",
+    change: "+₹3.25 (+27.24%)",
+    changeColor: "text-[#26bc0d]",
+    entry: "₹20.95",
+    stopLoss: "₹2.85",
+    strategy: "Trend Rider",
+    status: "In Buying Range",
+    statusColor: "text-[#26bc0d]",
+    tags: ["Swing", "Stock Options"],
+    tagColors: ["bg-[#ffcb14] text-[#0a0b0a]", "bg-[#007aff] text-white"],
+    companyLogo: "/ellipse-1-1.png",
+    exchangeIcon: "/image-27-1.png",
+    opacity: "opacity-70",
+  },
+  {
+    id: 3,
+    aiGenerated: true,
+    company: "NIFTY",
+    exchange: "NSE",
+    description: "NIFTY 24850 PE 31 Jul 2025",
+    price: "₹118.50",
+    change: "+₹74.30 (+168.24%)",
+    changeColor: "text-[#26bc0d]",
+    entry: "₹70.95",
+    stopLoss: "₹35.85",
+    strategy: "Momentum Surge",
+    status: "In Profit",
+    statusColor: "text-[#26bc0d]",
+    tags: ["Swing", "Index Options"],
+    tagColors: ["bg-[#ffcb14] text-[#0a0b0a]", "bg-[#007aff] text-white"],
+    companyLogo: "/image.png",
+    exchangeIcon: "/image-27-2.png",
+    opacity: "",
+  },
+];
+
+export const IntroductionSection = (): JSX.Element => {
+  return (
+    <section className="relative w-full h-[871px] bg-gradient-to-br from-[#1a4d1a] via-[#2d5a2d] to-[#4a6b2a] rounded-[12px_12px_48px_48px] overflow-hidden">
+      {/* Background gradient effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-yellow-900/10 to-green-800/30" />
+      
+      {/* Navigation header */}
+      <div className="w-[1270px] h-[66.84px] relative rounded-xl bg-black/[0.36] backdrop-blur-sm">
+  <svg
+    width={159}
+    height={49}
+    viewBox="0 0 159 49"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-[159px] h-[48.4px] absolute left-[25px] top-[9px]"
+    preserveAspectRatio="none"
+  >
+    <g clip-path="url(#clip0_1_107)">
+      <g clip-path="url(#clip1_1_107)">
+        <g clip-path="url(#clip2_1_107)">
+          <path
+            d="M17.0241 27.0184C16.0527 26.4096 15.0812 26.2957 10.1126 26.1377C6.92872 26.047 5.68539 25.9796 5.2787 25.8658C4.8046 25.7542 4.60009 25.4591 4.60009 24.8943C4.60009 23.7881 4.91616 23.6975 8.80185 23.6975C12.0531 23.6975 12.6178 23.7416 13.0036 23.9671C13.3429 24.1716 13.4103 24.3738 13.4545 25.2104H17.8816C17.9049 24.9176 17.9049 24.6015 17.9049 24.5109C17.9049 22.7262 17.5423 21.778 16.6406 21.1691C15.5786 20.4463 13.9983 20.2441 9.61524 20.2441C6.00145 20.2441 3.92382 20.3348 3.04303 20.516C0.965386 20.9669 0.152 22.2544 0.152 25.1244C0.152 28.4454 1.19081 29.3936 4.91848 29.5074L6.13857 29.5539L8.57875 29.6655L12.1925 29.8003C13.6613 29.8235 14.0006 30.0489 14.0006 30.9529C14.0006 32.2846 14.0006 32.2846 9.07608 32.2846C5.84575 32.2846 5.34842 32.2404 4.9208 31.9685C4.56059 31.7431 4.46995 31.4503 4.46995 30.5462H0.0195312V31.269C0.0195312 33.3466 0.35883 34.2274 1.39765 34.8828C2.45971 35.5614 4.28868 35.7636 8.96453 35.7636C13.4591 35.7636 15.3555 35.652 16.2595 35.3127C17.8189 34.7248 18.451 33.4373 18.451 30.8182C18.4464 28.7126 18.0629 27.6971 17.0241 27.0184Z"
+            fill="white"
+          />
+          <path
+            d="M19.1711 24.3087H25.8804V35.5335H30.6911V24.3087H37.4004V20.4695H19.1711V24.3087Z"
+            fill="white"
+          />
+          <path
+            d="M57.6403 21.283C56.4876 20.4022 55.0886 20.2441 48.7859 20.2441C42.4833 20.2441 41.0843 20.4022 39.9316 21.283C38.7789 22.1637 38.4419 23.6998 38.4419 27.9016C38.4419 32.3287 38.758 33.8184 39.9316 34.7224C41.0843 35.6032 42.4833 35.7613 48.8301 35.7613C55.063 35.7613 56.4876 35.6032 57.638 34.7224C58.7907 33.8417 59.13 32.3287 59.13 27.9922C59.13 23.6766 58.7907 22.1637 57.6403 21.283ZM53.8685 31.3108C53.2596 31.7617 52.5136 31.8523 48.8301 31.8523C45.035 31.8523 44.3123 31.7849 43.7034 31.3108C43.1619 30.8809 43.0248 30.272 43.0248 28.3966C43.0248 26.477 43.1154 25.6194 43.3873 25.0988C43.8382 24.2181 44.2681 24.1507 48.7859 24.1507C52.9877 24.1507 53.485 24.2181 54.0033 24.8293C54.41 25.3266 54.5447 26.1841 54.5447 28.4198C54.5447 30.2488 54.3867 30.9041 53.8685 31.3108Z"
+            fill="white"
+          />
+          <path
+            d="M75.2398 29.7305C75.2165 31.9662 75.1491 31.9894 70.1131 31.9894C65.2792 31.9894 65.2118 31.943 65.2118 28.0805C65.2118 25.7984 65.3931 24.9176 65.9346 24.4667C66.3854 24.1042 67.222 24.0159 70.0898 24.0159C72.9809 24.0159 74.3148 24.1507 74.6518 24.4458C74.9237 24.6712 74.9679 24.8757 75.0143 25.8681H79.5996V25.1221C79.5996 22.7052 79.1487 21.599 77.8612 20.9437C76.8224 20.4022 75.421 20.2441 71.4006 20.2441C63.5176 20.2441 61.8699 20.6276 61.0565 22.6611C60.7172 23.4976 60.6266 24.7386 60.6266 28.1037C60.6266 30.0234 60.6707 31.2667 60.7381 31.943C60.9194 33.4791 61.3703 34.3134 62.3649 34.8805C63.585 35.58 65.4814 35.7613 71.3773 35.7613C74.7192 35.7613 76.3692 35.6265 77.5893 35.2407C79.2603 34.6992 79.8924 33.593 79.8924 31.1528C79.8924 30.9274 79.8691 30.5881 79.8459 29.7305H75.2398Z"
+            fill="white"
+          />
+          <path
+            d="M109.279 13.0513L108.568 12.4912L88.5449 25.9354H86.0396V20.4694H81.4544V35.5335H86.0396V29.7746H88.5449L95.3007 35.5335H102.256L92.814 27.855L109.279 13.0513Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M124.303 31.7382H123.446L120.015 20.4692H114.48L111.068 31.7382H110.231L106.262 20.5599L102.739 23.581L107.182 35.5332H114.296L117.278 24.4874L120.306 35.5332H127.378L133.225 20.4692H128.368L124.303 31.7382Z"
+            fill="white"
+          />
+          <path d="M138.81 20.4692H133.999V35.5356H138.81V20.4692Z" fill="white" />
+          <path
+            d="M147.597 31.9195L158.62 23.925V20.4692H140.574V24.241L151.211 24.083L140.325 32.0101V35.5332H158.959V31.7614L147.597 31.9195Z"
+            fill="white"
+          />
+          <path
+            d="M111.722 19.8558L111.097 13.5462C110.964 13.5462 110.83 13.5392 110.697 13.5229L109.352 19.721C110.135 19.8581 110.93 19.9046 111.722 19.8558Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M107.815 8.44962L102.337 5.25415C101.961 5.95599 101.673 6.70199 101.475 7.47587L107.673 8.81449C107.715 8.68899 107.762 8.56814 107.815 8.44962Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M108.849 7.12038C108.996 7.00185 109.154 6.89495 109.319 6.79967L106.758 0.999023C106.023 1.35692 105.338 1.80312 104.71 2.33066L106.96 4.74295L108.849 7.12038Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M111.501 6.35341L112.837 0.153042C112.054 0.0136037 111.259 -0.0305518 110.466 0.0205757L111.103 6.33017C111.236 6.33017 111.368 6.33714 111.501 6.35341Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M107.568 10.6643L101.259 11.2964C101.368 12.0866 101.57 12.8581 101.863 13.5995L107.668 11.0454C107.629 10.9199 107.594 10.7944 107.568 10.6643Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M118.257 3.04171C117.704 2.46536 117.085 1.96105 116.414 1.53809L113.225 7.02036C113.332 7.09705 113.434 7.18072 113.53 7.27135L118.257 3.04171Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M114.392 11.4197L119.876 14.6035C120.251 13.9017 120.537 13.158 120.734 12.3818L114.534 11.0525C114.492 11.178 114.445 11.3012 114.392 11.4197Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M114.633 9.20266L120.943 8.56356C120.834 7.77341 120.629 7.00185 120.334 6.2605L114.533 8.82385C114.573 8.94702 114.608 9.07484 114.633 9.20266Z"
+            fill="#33C71F"
+          />
+          <path
+            d="M117.487 17.5502L115.366 15.2448L113.272 12.8186C113.146 12.9139 113.014 12.9999 112.879 13.0766L115.428 18.8842C116.167 18.5263 116.858 18.0801 117.487 17.5502Z"
+            fill="#33C71F"
+          />
+        </g>
+      </g>
+    </g>
+    <defs>
+      <clippath id="clip0_1_107">
+        <rect width={159} height="35.7893" fill="white" />
+      </clippath>
+      <clippath id="clip1_1_107">
+        <rect width={159} height="35.7893" fill="white" />
+      </clippath>
+      <clippath id="clip2_1_107">
+        <rect width="158.96" height="35.7893" fill="white" transform="translate(0.0195312)" />
+      </clippath>
+    </defs>
+  </svg>
+  <div className="flex justify-start items-center absolute left-[1065.09px] top-[9.42px] gap-2">
+    <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-12 h-12 relative overflow-hidden gap-[8.685714721679688px] px-[39.954288482666016px] py-[12.160000801086426px] rounded-[10.42px] border-[0.87px] border-white/[0.34]">
+      <svg
+        width={22}
+        height={21}
+        viewBox="0 0 22 21"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="flex-grow-0 flex-shrink-0 w-[20.85px] h-[20.85px] relative"
+        preserveAspectRatio="none"
+      >
+        <g clip-path="url(#clip0_1_130)">
+          <mask
+            id="mask0_1_130"
+            style={{ maskType: "luminance" }}
+            maskUnits="userSpaceOnUse"
+            x={0}
+            y={-1}
+            width={22}
+            height={22}
+          >
+            <path d="M21.5143 -0.00292969H0.668579V20.8428H21.5143V-0.00292969Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_1_130)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.7948 12.4889C15.5359 12.3595 14.267 11.7358 14.0307 11.649C13.7944 11.563 13.6225 11.5204 13.4496 11.7792C13.2776 12.0364 12.7834 12.6183 12.6331 12.7903C12.482 12.9631 12.3318 12.9839 12.0738 12.8554C11.8158 12.7252 10.9838 12.4533 9.99794 11.5743C9.23096 10.8899 8.71241 10.0447 8.56215 9.78595C8.41189 9.52791 8.54565 9.38806 8.67507 9.25955C8.79146 9.14399 8.93303 8.95815 9.06245 8.80789C9.19187 8.65676 9.23443 8.54906 9.32042 8.37621C9.40728 8.20424 9.36384 8.05398 9.29871 7.92456C9.23443 7.79514 8.7185 6.52442 8.5031 6.00762C8.29377 5.50472 8.08097 5.57334 7.92289 5.56465C7.77176 5.5577 7.59978 5.55596 7.4278 5.55596C7.25582 5.55596 6.97615 5.62024 6.73989 5.87907C6.50277 6.13704 5.83658 6.76154 5.83658 8.03226C5.83658 9.30214 6.76074 10.5294 6.89015 10.7023C7.01957 10.8742 8.70981 13.4817 11.299 14.5995C11.9157 14.8653 12.396 15.0243 12.7704 15.1424C13.3888 15.3395 13.9516 15.3118 14.3964 15.2449C14.8914 15.171 15.9233 14.6203 16.1387 14.0176C16.3533 13.4148 16.3533 12.898 16.289 12.7903C16.2246 12.6826 16.0536 12.6183 15.7948 12.4889ZM11.0854 18.9189H11.0819C9.54401 18.9192 8.03439 18.5058 6.71123 17.722L6.39854 17.5362L3.14835 18.3891L4.01606 15.2205L3.81194 14.8957C2.95217 13.5271 2.49717 11.9432 2.49953 10.327C2.50126 5.59331 6.35251 1.74207 11.0888 1.74207C13.3818 1.74207 15.5376 2.63669 17.1584 4.25919C17.9578 5.0553 18.5915 6.00203 19.0226 7.04461C19.4537 8.08718 19.6739 9.20489 19.6704 10.3331C19.6685 15.0668 15.8173 18.9189 11.0854 18.9189ZM18.3918 3.02669C17.4348 2.06337 16.2962 1.29956 15.0418 0.779515C13.7874 0.25947 12.4423 -0.0064702 11.0845 -0.0028941C5.39187 -0.0028941 0.757173 4.63094 0.755436 10.3261C0.752798 12.1386 1.22826 13.9197 2.13386 15.4898L0.668579 20.8428L6.14405 19.4062C7.65874 20.2315 9.35611 20.6639 11.081 20.6639H11.0854C16.778 20.6639 21.4127 16.0301 21.4144 10.334C21.4186 8.97663 21.1537 7.63194 20.6348 6.37766C20.116 5.12338 19.3536 3.98443 18.3918 3.02669Z"
+              fill="white"
+            />
+          </g>
+        </g>
+        <defs>
+          <clippath id="clip0_1_130">
+            <rect
+              width="20.8457"
+              height="20.8457"
+              fill="white"
+              transform="translate(0.668579 -0.00292969)"
+            />
+          </clippath>
+        </defs>
+      </svg>
+    </div>
+    <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-12 relative overflow-hidden gap-[8.685714721679688px] px-[39.954288482666016px] py-[12.160000801086426px] rounded-[10.42px] border-[0.87px] border-white/[0.34]">
+      <p className="flex-grow-0 flex-shrink-0 text-[15.634285926818848px] font-semibold text-center text-white">
+        Sign Up
+      </p>
+    </div>
+  </div>
+</div>;
+
+      {/* Main content */}
+      <main className="flex flex-col w-full max-w-4xl mx-auto items-center gap-8 absolute top-[120px] left-1/2 transform -translate-x-1/2">
+        <div className="flex flex-col items-center gap-6 relative w-full">
+          {/* Attendees badge */}
+          <Badge className="flex items-center gap-3 px-6 py-3 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+            <div className="flex -space-x-2">
+              <img className="w-8 h-8 rounded-full border-2 border-white" src="/ellipse-1-1.png" alt="User 1" />
+              <img className="w-8 h-8 rounded-full border-2 border-white" src="/image.png" alt="User 2" />
+              <img className="w-8 h-8 rounded-full border-2 border-white" src="/ellipse-1-1.png" alt="User 3" />
+            </div>
+            <span className="text-white font-semibold text-lg">
+              1,00,000+ Attendees
+            </span>
+          </Badge>
+
+          {/* Main heading section */}
+          <div className="flex flex-col items-center gap-6 text-center">
+            <h1 className="text-white text-7xl font-light leading-tight">
+              Introducing
+            </h1>
+
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-yellow-400 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">✨</span>
+                </div>
+                <h2 className="text-7xl font-medium bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
+                  AI Powered
+                </h2>
+              </div>
+              <h2 className="text-white text-7xl font-light">
+                Signals
+              </h2>
+            </div>
+
+            <p className="text-white/80 text-xl max-w-3xl leading-relaxed">
+              Trade smarter with AI-Generated Signals — built with institutional precision, made for everyday traders.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex items-center gap-8">
+          <div className="flex flex-col items-center gap-2">
+            <Button className="w-80 h-16 bg-white text-black rounded-full font-semibold text-lg hover:bg-gray-100 flex items-center justify-between px-8">
+              <span>Join Now English (Free <span className="line-through text-sm">₹299</span>)</span>
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xl">→</span>
+              </div>
+            </Button>
+            <p className="text-white/60 text-sm">(Limited Seats Only)</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <Button className="w-80 h-16 bg-black/50 text-white rounded-full font-semibold text-lg border border-white/20 hover:bg-black/70 flex items-center justify-between px-8">
+              <span>Join Now Hindi (Free <span className="line-through text-sm">₹299</span>)</span>
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xl">→</span>
+              </div>
+            </Button>
+            <p className="text-white/60 text-sm">(Limited Seats Only)</p>
+          </div>
+        </div>
+      </main>
+
+      {/* Signal Cards Section */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-8">
+        <div className="flex justify-center items-end gap-6 pb-8">
+          {signalCards.map((card, index) => (
+            <Card
+              key={card.id}
+              className={`${
+                index === 2 
+                  ? "w-96 h-96 shadow-2xl shadow-white/20" 
+                  : "w-80 h-80 opacity-70"
+              } bg-gray-900/90 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden`}
+            >
+              <CardContent className="p-0 relative w-full h-full">
+                {/* AI Generated Badge */}
+                <Badge className="absolute top-0 left-4 bg-gradient-to-r from-green-600 to-yellow-500 text-white px-3 py-1 rounded-b-lg flex items-center gap-2">
+                  <span className="text-xs">⚡</span>
+                  <span className="text-xs font-medium">AI Generated</span>
+                </Badge>
+
+                {/* Tags */}
+                <div className="absolute top-0 right-4 flex gap-2">
+                  {card.tags.map((tag, tagIndex) => (
+                    <Badge
+                      key={tagIndex}
+                      className={`${card.tagColors[tagIndex]} px-2 py-1 text-xs rounded-b-lg`}
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="p-6 h-full flex flex-col">
+                  {/* Stock Info Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <img
+                        className="w-10 h-10 rounded-full"
+                        alt={card.company}
+                        src={card.companyLogo}
+                      />
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-white font-bold text-sm">
+                            {card.company}
+                          </h3>
+                          <Badge className="bg-gray-700 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1">
+                            <img className="w-3 h-3" src={card.exchangeIcon} alt="NSE" />
+                            {card.exchange}
+                          </Badge>
+                        </div>
+                        <p className="text-white/60 text-xs">
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <div className="text-white font-bold text-sm">
+                        {card.price}
+                      </div>
+                      <div className={`${card.changeColor} text-xs font-medium`}>
+                        {card.change}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Trading Timeline */}
+                  <div className="relative mb-4">
+                    <div className="flex items-center justify-between">
+                      <div className="text-center">
+                        <div className="w-2 h-2 bg-white rounded-full mb-1"></div>
+                        <div className="text-white text-xs font-bold">SL</div>
+                      </div>
+                      <div className="flex-1 h-0.5 bg-gray-600 mx-2 relative">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                          <Badge className="bg-red-500 text-white text-xs px-2 py-0.5 rounded">
+                            Live
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-2 h-2 bg-white rounded-full mb-1"></div>
+                        <div className="text-white text-xs font-bold">Target</div>
+                      </div>
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <div className="text-center">
+                        <div className="text-white text-xs">27 July</div>
+                        <div className="text-white text-xs">12:02 PM</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-white text-xs">Entry</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Entry/Stop Loss Info */}
+                  <div className="flex justify-between p-3 bg-gray-800/50 rounded-lg mb-4">
+                    <div>
+                      <div className="text-white/60 text-xs">Entry</div>
+                      <div className="text-white font-medium text-sm">{card.entry}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-white/60 text-xs">Stop Loss</div>
+                      <div className="text-white font-medium text-sm">{card.stopLoss}</div>
+                    </div>
+                  </div>
+
+                  {/* Strategy/Status Info */}
+                  <div className="flex justify-between p-3 bg-black/50 rounded-lg mb-4">
+                    <div>
+                      <div className="text-white/60 text-xs">Strategy</div>
+                      <div className="text-green-400 font-bold text-sm">{card.strategy}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-white/60 text-xs">Status</div>
+                      <div className={`${card.statusColor} font-bold text-sm`}>{card.status}</div>
+                    </div>
+                  </div>
+
+                  {/* Trade Now Button */}
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg">
+                    Trade Now
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
