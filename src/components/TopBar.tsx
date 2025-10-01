@@ -16,7 +16,10 @@ export const TopBar = ({
   return (
     <>
      {/* Navigation header */}
-      <div className="w-[1270px] h-[66.84px] relative rounded-xl bg-black/[0.36] backdrop-blur-sm">
+     <div className="w-full max-w-[1270px] mx-auto h-[66px] bg-black/40 backdrop-blur-sm rounded-xl flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      
+      {/* Logo */}
+      <div className="flex-shrink-0">
   <svg
     width={159}
     height={49}
@@ -109,17 +112,20 @@ export const TopBar = ({
       </clippath>
     </defs>
   </svg>
- <div className="flex justify-end items-center absolute top-3 right-3 gap-3">
-  {/* Icon Container */}
-  <div className="flex justify-center items-center w-12 h-12 rounded-lg border border-white/30">
-    <svg
-      width={22}
-      height={21}
-      viewBox="0 0 22 21"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 text-white"
-    >
+  </div>
+ <div className="flex items-center gap-2 sm:gap-3">
+        
+        {/* WhatsApp Icon */}
+        <div className="flex justify-center items-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg border border-white/30">
+      <svg
+        width={22}
+        height={21}
+        viewBox="0 0 22 21"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="flex-grow-0 flex-shrink-0 w-[20.85px] h-[20.85px] relative"
+        preserveAspectRatio="none"
+      >
         <g clip-path="url(#clip0_1_130)">
           <mask
             id="mask0_1_130"
@@ -153,14 +159,14 @@ export const TopBar = ({
         </defs>
       </svg>
     </div>
-    <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-12 relative overflow-hidden gap-[8.685714721679688px] px-[39.954288482666016px] py-[12.160000801086426px] rounded-[10.42px] border-[0.87px] border-white/[0.34]">
+
        <button 
-         className="flex-grow-0 flex-shrink-0 text-[15.634285926818848px] font-semibold text-center text-white"
+        className="h-8 sm:h-10 lg:h-12 px-3 sm:px-4 lg:px-5 flex items-center justify-center text-xs sm:text-sm lg:text-base font-semibold text-white border border-white/30 rounded-lg"
           onClick={() => setIsOpen(true)}
        >
           Sign Up
         </button>
-      </div>
+
 
      
 

@@ -48,6 +48,12 @@ function App() {
             className="bg-black rounded-3xl p-12 w-11/12 max-w-2xl"
             onClick={(e) => e.stopPropagation()}
           >
+            <button
+        className="absolute top-4 right-4 text-white text-2xl "
+        onClick={() => setIsOpen(false)}
+      >
+        &times;
+      </button>
             {/* Logo */}
             <div className="flex items-center justify-center gap-3 mb-10">
  
