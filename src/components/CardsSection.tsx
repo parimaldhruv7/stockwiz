@@ -131,20 +131,23 @@ export const CardsSection = () => {
   ];
 
   return (
-    <div className="bg-[#0a0a0a] flex items-center justify-center p-8 ">
-      <section className="relative w-[980px] h-[400px] flex items-center justify-center">
-        <div className="absolute top-[50px] left-0 w-[300px] h-[300px] opacity-70">
-          <TradingCard {...cardData[0]} size="small" />
-        </div>
-
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[370px] h-[380px] shadow-[0px_4px_36.4px_rgba(255,255,255,0.25)] z-10">
-          <TradingCard {...cardData[1]} size="large" />
-        </div>
-
-        <div className="absolute top-[50px] right-0 w-[300px] h-[300px] opacity-70">
-          <TradingCard {...cardData[2]} size="small" />
-        </div>
-      </section>
+    <>
+    <div className="bg-[#0a0a0a] flex items-center justify-center p-8 overflow-x-auto">
+  <section className="relative w-[980px] h-[400px] flex items-center justify-center shrink-0">
+    <div className="absolute top-[50px] left-0 w-[300px] h-[300px] opacity-70">
+      <TradingCard {...cardData[0]} size="small" />
     </div>
+
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[370px] h-[380px] shadow-[0px_4px_36.4px_rgba(255,255,255,0.25)] z-10">
+      <TradingCard {...cardData[1]} size="large" />
+    </div>
+
+    <div className="absolute top-[50px] right-0 w-[300px] h-[300px] opacity-70">
+      <TradingCard {...cardData[2]} size="small" />
+    </div>
+  </section>
+</div>
+
+    </>
   );
 };

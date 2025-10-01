@@ -25,7 +25,7 @@ export const IntroductionSection = () => {
     buttonBg: "bg-white",
     iconColor: "text-black",
   },
-];
+];  
   return (
     <section className="flex flex-col items-center text-center gap-8 max-w-[868px] w-full">
       {/* Attendees Badge */}
@@ -62,7 +62,7 @@ export const IntroductionSection = () => {
       ))}
     </div>
 
-      <p className="text-white/80 text-sm mt-2">(Limited Seats Only)</p>
+
     </section>
   );
 };
