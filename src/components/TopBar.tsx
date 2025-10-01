@@ -109,17 +109,17 @@ export const TopBar = ({
       </clippath>
     </defs>
   </svg>
-  <div className="flex justify-start items-center absolute left-[1065.09px] top-[9.42px] gap-2">
-    <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-12 h-12 relative overflow-hidden gap-[8.685714721679688px] px-[39.954288482666016px] py-[12.160000801086426px] rounded-[10.42px] border-[0.87px] border-white/[0.34]">
-      <svg
-        width={22}
-        height={21}
-        viewBox="0 0 22 21"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="flex-grow-0 flex-shrink-0 w-[20.85px] h-[20.85px] relative"
-        preserveAspectRatio="none"
-      >
+ <div className="flex justify-end items-center absolute top-3 right-3 gap-3">
+  {/* Icon Container */}
+  <div className="flex justify-center items-center w-12 h-12 rounded-lg border border-white/30">
+    <svg
+      width={22}
+      height={21}
+      viewBox="0 0 22 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6 text-white"
+    >
         <g clip-path="url(#clip0_1_130)">
           <mask
             id="mask0_1_130"
